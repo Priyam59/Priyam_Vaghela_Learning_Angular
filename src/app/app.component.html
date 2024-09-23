@@ -1,4 +1,21 @@
-<h1>{{title}}</h1><br>
-<p>{{name}}</p><br>
-<p>{{agee}}</p>
+<html>
+<head>
+  <title>Assignment 2</title>
+</head>
+<body>
+<div class ="first">
+  <div *ngFor="let book of bookList">
+    <div>
+    {{book.id}}
+    {{book.title}}
+    {{book.author}}
+    {{book.genre}}
+    {{book.available}}
+  </div>
+    <div *ngIf="book.available == true">This book is available in the store</div>
+    <div *ngIf="book.available == false">This book is unavailable in the store</div>
+  </div>
+</div>
 
+</body>
+</html>
