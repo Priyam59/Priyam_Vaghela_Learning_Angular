@@ -12,4 +12,8 @@ export class AppComponent {
   title = 'Priyam-Vaghela-Learning-Angular';
   name = 'Priyamsinh Vaghela';
   agee = 19;
+
+
 }
+
+
