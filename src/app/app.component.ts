@@ -16,7 +16,7 @@ export class AppComponent {
   book3 : Books = {id : 3, title : "Crime and Punishment", author : "Fyodor Dostoevsky", genre : "crime fiction", available : true};
   book4 : Books = {id : 4, title : "The Setting Sun", author : "Dazai Osamu", genre : "fiction", available : true};
   book5 : Books = {id : 5, title : "The Song Of Achilles", author : "Glennie Kindred", genre : "War Story", available: false};
-  book6 : Books = {id : 5, title : "It Ends with us", author : "Collen Hoover", genre : "Romance",available: true};
+  book6 : Books = {id : 6, title : "It Ends with us", author : "Collen Hoover", genre : "Romance",available: true};
 
   bookList : Books[] = [this.book1,this.book2,this.book3,this.book4,this.book5,this.book6]
 }
