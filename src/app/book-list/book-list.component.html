@@ -1,4 +1,2 @@
-<app-book-list-item></app-book-list-item>
-<app-book-list-item></app-book-list-item>
-<app-book-list-item></app-book-list-item>
-<app-book-list-item></app-book-list-item>
+<app-book-list-item *ngFor="let book of bookList" [book]="book"></app-book-list-item>
+
