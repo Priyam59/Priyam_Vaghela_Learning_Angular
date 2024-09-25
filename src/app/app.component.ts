@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Books} from "./models/books";
 import {NgFor, NgIf} from "@angular/common";
+import {BookListComponent} from "./book-list/book-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgIf],
+  imports: [RouterOutlet, NgFor, NgIf, BookListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
