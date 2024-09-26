@@ -1,0 +1,9 @@
+:host{
+  width: 100%;
+  display: block;
+}
+
+.oddd {
+  display: flex;
+  flex-direction: column;
+}
