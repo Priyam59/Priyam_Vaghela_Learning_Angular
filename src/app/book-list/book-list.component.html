@@ -1,8 +1,24 @@
-<img src="https://media.istockphoto.com/id/2154284120/photo/divine-light-on-an-open-prayer-book.jpg?s=2048x2048&w=is&k=20&c=EADJ1Ey77zr1WBEFuRxuinAvwZhxMoqU5qyKOAGKRAo=" width="450px">
 <div class="container">
-
-<app-book-list-item *ngFor="let book of bookList; let i = index"
-                    [book]="book"
-                    [ngClass]="{'blue-background': i % 2 !== 0, 'red-background': i % 2 === 0}">
-  </app-book-list-item>
+  <h2>Student List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Department</th>
+      <th>Admin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of bookList" (click)="selectBook(book)">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.genre }}</td>
+      <td>{{ book.available ? 'Yes' : 'No' }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <app-student-detail [book]="selectedBook"></app-student-detail>
 </div>
