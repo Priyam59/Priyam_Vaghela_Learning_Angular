@@ -1,5 +1,6 @@
 <img src="https://media.istockphoto.com/id/2154284120/photo/divine-light-on-an-open-prayer-book.jpg?s=2048x2048&w=is&k=20&c=EADJ1Ey77zr1WBEFuRxuinAvwZhxMoqU5qyKOAGKRAo=" width="450px">
-<div class="oddd">
+<div class="container">
+
 <app-book-list-item *ngFor="let book of bookList; let i = index"
                     [book]="book"
                     [ngClass]="{'blue-background': i % 2 !== 0, 'red-background': i % 2 === 0}">

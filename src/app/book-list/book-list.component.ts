@@ -26,9 +26,13 @@ export class BookListComponent {
 
       this.bookService.getbooks().subscribe({
         next: (data: Books[]) => this.bookList = data,
-        error: err => console.error("Error fetching Students", err),
-        complete: () => console.log("Student data fetch complete!")
+        error: err => console.error("Error fetching Books", err),
+        complete: () => console.log("Book data fetch complete!")
       })
     }
+  selectedBook?: Books;
+  selectBook(books: Books): void {
+    this.selectedBook = books;
+  }
   }
 
