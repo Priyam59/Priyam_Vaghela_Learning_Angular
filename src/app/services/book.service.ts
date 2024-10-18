@@ -13,26 +13,26 @@ private books : Books[] = booklist;
   getbooks() : Observable<Books[]>{
     return of(booklist);
   }
-  addStudent(newBook:Books) : Observable<Books[]>{
+  addBook(newBook:Books) : Observable<Books[]>{
     this.books.push(newBook)
     return of(this.books);
   }
 
   //Update an Existing user
-  updateStudent(updatedStudent: Books): Observable<Books[]> {
-    const index = this.books.findIndex(user => user.id === updatedStudent.id);
+  updateBook(updatedBook: Books): Observable<Books[]> {
+    const index = this.books.findIndex(book => book.id === updatedBook.id);
     if (index !== -1) {
-      this.books[index] = updatedStudent;
+      this.books[index] = updatedBook;
     }
     return of(this.books);
   }
   //Delete: Remove a user by ID
-  deleteStudent(studentId: number): Observable<Books[]> {
-    this.books = this.books.filter(user => user.id !== studentId);
+  deleteBook(bookId: number): Observable<Books[]> {
+    this.books = this.books.filter(book => book.id !== bookId);
     return of(this.books);
   }
-  getStudentById(studentId: number): Observable<Books | undefined> {
-    const student = this.books.find(user => user.id === studentId);
-    return of(student);
+  getBookById(bookId: number): Observable<Books | undefined> {
+    const book = this.books.find(book => book.id === bookId);
+    return of(book);
   }
 }
