@@ -1,5 +1,13 @@
+<div class="nav-bar">
+    <nav>
+        <a routerLink="/books" routerLinkActive="active">Book List</a>
+        <a routerLink="/modify-book" routerLinkActive="active">Modify Book</a>
+    </nav>
+</div>
+
 <div class="app-container">
   <h1>{{title}}</h1>
 
   <app-book-list></app-book-list>
+    <router-outlet></router-outlet>
 </div>

@@ -1,7 +1,11 @@
-
-<div class="something" style="border: 2px solid red; padding: 10px; margin: 10px;">
-  <h2>{{book?.title}}</h2>
-  <p>Author : {{book?.author}}</p>
-  <p>Genre : {{book?.genre}}</p>
-  <p>Availability : {{book?.available}}</p>
+<div *ngIf="book" class="book-detail">
+    <h2>Book Details</h2>
+    <p><strong>ID:</strong> {{ book.id }}</p>
+    <p><strong>First Name:</strong> {{ book.title }}</p>
+    <p><strong>Last Name:</strong> {{ book.author }}</p>
+    <p><strong>Department:</strong> {{ book.genre }}</p>
+    <p><strong>Admin:</strong> {{ book.available ? 'Yes' : 'No' }}</p>
+    <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
+    <button (click)="goForward()" [disabled]="currentIndex === bookList.length - 1">Next</button>
+    <button (click)="goBack()">Back to Student List</button>
 </div>
