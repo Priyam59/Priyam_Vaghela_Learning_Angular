@@ -9,5 +9,5 @@
     <p><strong>Availability:</strong> {{ book.available ? 'Yes' : 'No' }}</p>
     <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
     <button (click)="goForward()" [disabled]="currentIndex === bookList.length - 1">Next</button>
-    <button (click)="goBack()">Back to Book List</button>
+    <button (click)="goBack()">Back to the Book List</button>
 </div>
