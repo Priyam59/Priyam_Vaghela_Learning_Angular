@@ -1,11 +1,13 @@
 <div *ngIf="book" class="book-detail">
     <h2>Book Details</h2>
+
+    <img [src]="book.imageURL" alt="image" >
     <p><strong>ID:</strong> {{ book.id }}</p>
-    <p><strong>First Name:</strong> {{ book.title }}</p>
-    <p><strong>Last Name:</strong> {{ book.author }}</p>
-    <p><strong>Department:</strong> {{ book.genre }}</p>
-    <p><strong>Admin:</strong> {{ book.available ? 'Yes' : 'No' }}</p>
+    <p><strong>Title:</strong> {{ book.title }}</p>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Genre:</strong> {{ book.genre }}</p>
+    <p><strong>Availability:</strong> {{ book.available ? 'Yes' : 'No' }}</p>
     <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
     <button (click)="goForward()" [disabled]="currentIndex === bookList.length - 1">Next</button>
-    <button (click)="goBack()">Back to Student List</button>
+    <button (click)="goBack()">Back to Book List</button>
 </div>

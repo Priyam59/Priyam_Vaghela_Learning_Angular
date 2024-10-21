@@ -3,5 +3,6 @@ export interface Books {
   title : string;
   author : string;
   genre : string;
-  available ?: boolean;
+  available: boolean;
+  imageURL ?: string;
 }

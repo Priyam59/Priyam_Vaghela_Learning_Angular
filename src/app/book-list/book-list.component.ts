@@ -3,6 +3,7 @@ import {Books} from "../models/books";
 import {BookListItemComponent} from "../book-list-item/book-list-item.component";
 import {NgClass, NgFor} from "@angular/common";
 import {BookService} from "../services/book.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-book-list',
@@ -10,7 +11,8 @@ import {BookService} from "../services/book.service";
   imports: [
     BookListItemComponent,
     NgFor,
-    NgClass
+    NgClass,
+    RouterLink
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'

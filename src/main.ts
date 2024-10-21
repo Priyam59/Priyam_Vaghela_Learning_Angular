@@ -8,9 +8,9 @@ import {ModifyBookComponent} from "./app/modify-book/modify-book.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/books', pathMatch: 'full'},
-  { path: 'students', component: BookListComponent },
-  { path: 'students/:id', component: BookListItemComponent },
-  {path:'modify-student', component: ModifyBookComponent},
+  { path: 'books', component: BookListComponent },
+  { path: 'books/:id', component: BookListItemComponent },
+  {path:'modify-book  ', component: ModifyBookComponent},
   {path: '**', component:PageNotFoundComponent}
 ];
 bootstrapApplication(AppComponent, {
