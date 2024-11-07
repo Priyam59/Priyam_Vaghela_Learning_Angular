@@ -18,7 +18,7 @@ export class BookListItemComponent implements OnInit{
   bookList: Books[] = [];
   currentIndex: number = 0;
 
-  constructor(
+  constructor(    
       private route: ActivatedRoute,
       private bookService: BookService,
       private router: Router

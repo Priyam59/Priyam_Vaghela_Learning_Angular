@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {Books} from "../models/books";
 import {BookListItemComponent} from "../book-list-item/book-list-item.component";
-import {NgClass, NgFor} from "@angular/common";
+import {NgClass, NgFor, NgIf} from "@angular/common";
 import {BookService} from "../services/book.service";
 import {RouterLink} from "@angular/router";
+import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-book-list',
@@ -12,7 +13,8 @@ import {RouterLink} from "@angular/router";
     BookListItemComponent,
     NgFor,
     NgClass,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
@@ -36,5 +38,7 @@ export class BookListComponent {
   selectBook(books: Books): void {
     this.selectedBook = books;
   }
-  }
+
+  protected readonly error = error;
+}
 

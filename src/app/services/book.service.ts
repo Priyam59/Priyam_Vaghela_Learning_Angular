@@ -35,4 +35,9 @@ private books : Books[] = booklist;
     const book = this.books.find(book => book.id === bookId);
     return of(book);
   }
+
+  generateNewId(): number {
+    return this.books.length > 0 ? Math.max(...this.books.map(booklist => booklist.id)) + 1 : 1;
+  }
+
 }
