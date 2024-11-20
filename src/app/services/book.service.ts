@@ -31,6 +31,11 @@ private books : Books[] = booklist;
     this.books = this.books.filter(book => book.id !== bookId);
     return of(this.books);
   }
+
+  generateNewId(): number {
+    return this.books.length > 0 ? Math.max(...this.books.map(book => book.id)) + 1 : 1;
+  }
+
   getBookById(bookId: number): Observable<Books | undefined> {
     const book = this.books.find(book => book.id === bookId);
     return of(book);
