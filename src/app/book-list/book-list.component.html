@@ -12,6 +12,7 @@
     </tr>
     </thead>
     <tbody>
+
     <tr *ngFor="let book of bookList" [routerLink]="['/books',book.id ]" appHighlightOnFocus [appHoverHighlight]="'red'">
 
       <td>{{ book.id }}</td>
