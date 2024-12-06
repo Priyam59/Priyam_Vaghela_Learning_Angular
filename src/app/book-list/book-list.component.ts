@@ -5,6 +5,7 @@ import {DatePipe, LowerCasePipe, NgClass, NgFor, TitleCasePipe, UpperCasePipe} f
 import {BookService} from "../services/book.service";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TitleAuthorPipe} from "../pipes/title-author.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-book-list',
@@ -18,7 +19,8 @@ import {TitleAuthorPipe} from "../pipes/title-author.pipe";
     TitleCasePipe,
     LowerCasePipe,
     DatePipe,
-    UpperCasePipe
+    UpperCasePipe,
+    HoverHighlightDirective
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'

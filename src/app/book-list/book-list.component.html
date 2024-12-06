@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let book of bookList" [routerLink]="['/books',book.id ]">
+    <tr *ngFor="let book of bookList" [routerLink]="['/books',book.id ]" [appHoverHighlight]="'red'">
 
       <td>{{ book.id }}</td>
       <td>{{ book |titleAuthor | uppercase}}</td>
