@@ -40,6 +40,6 @@ private books : Books[] = booklist;
     const book = this.books.find(book => book.id === bookId);
     return of(book);
   }
-  
+
 
 }

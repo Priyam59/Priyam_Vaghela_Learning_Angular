@@ -3,6 +3,7 @@ export interface Books {
   title : string;
   author : string;
   genre : string;
+  publish ?: number;
   available: boolean;
   imageURL ?: string;
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {Books} from "../models/books";
 import {BookListItemComponent} from "../book-list-item/book-list-item.component";
-import {NgClass, NgFor} from "@angular/common";
+import {DatePipe, LowerCasePipe, NgClass, NgFor, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {BookService} from "../services/book.service";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {TitleAuthorPipe} from "../pipes/title-author.pipe";
 
 @Component({
   selector: 'app-book-list',
@@ -12,7 +13,12 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
     BookListItemComponent,
     NgFor,
     NgClass,
-    RouterLink
+    RouterLink,
+    TitleAuthorPipe,
+    TitleCasePipe,
+    LowerCasePipe,
+    DatePipe,
+    UpperCasePipe
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'

@@ -7,6 +7,7 @@
       <th>Title</th>
       <th>Author</th>
       <th>Genre</th>
+      <th>Published Date</th>
       <th>Availability</th>
     </tr>
     </thead>
@@ -14,9 +15,10 @@
     <tr *ngFor="let book of bookList" [routerLink]="['/books',book.id ]">
 
       <td>{{ book.id }}</td>
-      <td>{{ book.title }}</td>
+      <td>{{ book |titleAuthor | uppercase}}</td>
       <td>{{ book.author }}</td>
-      <td>{{ book.genre }}</td>
+      <td>{{ book.genre | lowercase}}</td>
+      <td>{{book.publish | date : 'longDate'}}</td>
       <td>{{ book.available ? 'Yes' : 'No' }}</td>
       <button type="button" (click)="onEdit()">Edit</button>
       <button type="button" (click)="onDelete(book.id)">Delete</button>
