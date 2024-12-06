@@ -43,11 +43,13 @@ export class BookListComponent {
     this.selectedBook = book;
   }
 
-  onEdit() {
-    this.router.navigate(['/modify-book'])
+  onEdit(): void {
+    this.router.navigate(['/modify-book']);
   }
 
-  onDelete() {
-    this.bookList = this.bookList.filter(book=>book.id!==this.selectedBook?.id);
+  onDelete(bookId: number): void {
+    this.bookService.deleteBook(bookId).subscribe(() => {
+      this.bookList = this.bookList.filter(book => book.id !== bookId);
+    });
   }
 }
