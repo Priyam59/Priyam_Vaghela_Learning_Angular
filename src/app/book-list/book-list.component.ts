@@ -6,6 +6,7 @@ import {BookService} from "../services/book.service";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TitleAuthorPipe} from "../pipes/title-author.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 @Component({
   selector: 'app-book-list',
@@ -20,7 +21,8 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     LowerCasePipe,
     DatePipe,
     UpperCasePipe,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    HighlightOnFocusDirective
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
